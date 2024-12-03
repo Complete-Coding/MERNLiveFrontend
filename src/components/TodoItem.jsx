@@ -6,7 +6,7 @@ const TodoItem = ({ id, todoText, todoDate, completed }) => {
   const [isComplete, setIsComplete] = useState(completed);
 
   const deleteHandler = () => {
-    fetch(`http://mern-live-backend.azurewebsites.net/todos/${id}`, {
+    fetch(`//mern-live-backend.azurewebsites.net/todos/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -17,7 +17,7 @@ const TodoItem = ({ id, todoText, todoDate, completed }) => {
   };
 
   const toggleComplete = () => {
-    fetch(`http://mern-live-backend.azurewebsites.net/todos/${id}`, {
+    fetch(`//mern-live-backend.azurewebsites.net/todos/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ completed: !isComplete }),

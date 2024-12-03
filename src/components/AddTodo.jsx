@@ -16,7 +16,7 @@ const AddTodo = () => {
     todoTextInput.current.value = "";
     todoDateInput.current.value = "";
 
-    fetch("http://mern-live-backend.azurewebsites.net/todos", {
+    fetch("//mern-live-backend.azurewebsites.net/todos", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ task: todoText, date: todoDate }),

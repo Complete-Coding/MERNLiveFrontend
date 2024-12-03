@@ -10,7 +10,7 @@ const LoadItems = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://mern-live-backend.azurewebsites.net/todos")
+    fetch("//mern-live-backend.azurewebsites.net/todos")
       .then((res) => res.json())
       .then((items) => {
         const newItems = items.map(todoItemToClientModel);
