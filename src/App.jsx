@@ -1,21 +1,16 @@
-import AddTodo from "./components/AddTodo";
-import AppName from "./components/AppName";
-import LoadItems from "./components/LoadItems";
-import TodoItems from "./components/TodoItems";
-import { TodoItemsProvider } from "./store/TodoItemsContext";
+import ExampleComponent from "./components/ExampleComponent";
+import { ExampleProvider } from "./store/ExampleContext";
 
 function App() {
   return (
-    <TodoItemsProvider>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4">
-          <AppName />
-          <AddTodo />
-          <LoadItems />
-          <TodoItems />
+    <ExampleProvider>
+      <div className="min-h-screen bg-gray-100">
+        <div className="py-8">
+          <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Example App</h1>
+          <ExampleComponent />
         </div>
       </div>
-    </TodoItemsProvider>
+    </ExampleProvider>
   );
 }
 

@@ -1,8 +1,6 @@
-export const todoItemToClientModel = (serverItem) => {
+export const exampleServerToClientModel = (serverItem) => {
   return {
     id: serverItem._id,
-    todoText: serverItem.task,
-    todoDate: serverItem.date,
-    completed: serverItem.completed
+    text: serverItem.text,
   }
 }
